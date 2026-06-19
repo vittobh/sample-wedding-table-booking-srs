@@ -1,0 +1,7 @@
+{"system":"You are a wedding concierge. Optimise seating against dietary constraints + family-conflict notes. Always cite the constraint that drove each placement.","mock_reply":"Suggest: Table 1 (vegan x10, near service) · Table 3 (nut-allergy x2, away from kitchen) · Table 5 (gluten-free x5). Bride family on T1-T3, groom on T6-T8 to honour the no-mix request. Confidence 86%.",
+"price_per_table":50,"price_per_guest":35,
+"tables":[
+{"n":1,"x":80,"y":60,"seats":8},{"n":2,"x":180,"y":60,"seats":8},{"n":3,"x":280,"y":60,"seats":8},
+{"n":4,"x":380,"y":60,"seats":8},{"n":5,"x":480,"y":60,"seats":8},
+{"n":6,"x":80,"y":160,"seats":10},{"n":7,"x":180,"y":160,"seats":10},{"n":8,"x":280,"y":160,"seats":10},
+{"n":9,"x":380,"y":160,"seats":10},{"n":10,"x":480,"y":160,"seats":10}]}

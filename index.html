@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Wedding Booking — AI Concierge</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"></head>
+<body><header>
+<div><h1>Wedding Booking — AI Concierge</h1><div class="tagline">Multi-channel agent · web + WhatsApp + voice · allergen-aware menu · seating optimiser</div></div>
+<button id="theme-toggle" class="theme-toggle">☾ Dark</button>
+</header><main>
+<div id="ai-banner" class="banner" style="display:none"></div>
+<div class="row" style="margin-bottom:1rem">
+  <span class="dim">Live AI keys:</span>
+  <button class="btn btn-ghost" onclick="app.setKey('anthropic')">+ Claude</button>
+  <button class="btn btn-ghost" onclick="app.setKey('gemini')">+ Gemini</button>
+  <button class="btn btn-ghost" onclick="app.setKey('grok')">+ Grok</button>
+</div>
+<div class="grid" style="grid-template-columns:2fr 1fr">
+  <div class="card"><h3>Book Your Event</h3>
+    <div class="row"><span style="width:7rem">Date</span><input class="input" type="date" id="date"></div>
+    <div class="row" style="margin-top:.5rem"><span style="width:7rem">Venue</span>
+      <select class="select" id="venue"><option>Garden Hall</option><option>Crystal Room</option><option>Riverside Pavilion</option></select></div>
+    <div class="row" style="margin-top:.5rem"><span style="width:7rem">Guests</span><input class="input" type="number" id="guests" value="80"></div>
+    <div class="row" style="margin-top:.5rem"><span style="width:7rem">Dietary</span>
+      <input class="input" id="diet" placeholder="vegan x10, nut allergy x2, gluten-free x5"></div>
+    <h3 style="margin-top:1rem">Tables</h3>
+    <svg id="tables" width="100%" height="220" viewBox="0 0 600 220"></svg>
+    <div class="dim" style="font-size:.85rem">Click tables to (de)select. Selected: <b id="sel-count">0</b> · Capacity: <b id="cap">0</b></div>
+    <div class="row" style="margin-top:1rem"><b style="flex:1">Estimated total</b><b id="total">$0</b></div>
+    <button class="btn btn-primary" style="margin-top:.5rem;width:100%" onclick="confirmBooking()">Confirm booking</button>
+  </div>
+  <div class="card"><h3>🤖 Concierge</h3>
+    <div id="chat" style="height:240px;overflow:auto;font-size:.85rem;background:var(--surface-2);padding:.5rem;border-radius:.5rem"></div>
+    <div class="row" style="margin-top:.5rem"><input class="input" id="msg" placeholder="Plan seating for my family…">
+    <button class="btn btn-primary" onclick="ask()">→</button></div>
+  </div>
+</div>
+</main>
+<script src="app.js"></script><script src="page.js"></script>
+</body></html>
